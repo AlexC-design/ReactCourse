@@ -26,5 +26,10 @@ describe("VideoIem", () => {
       <VideoItem /> // Do not add props
     );
     expect(wrapper.html()).toMatch('Unexpected input');
+
+    const wrapper1 = shallow(
+      <VideoItem video={1} />
+    );
+    expect(wrapper1.html()).toMatch('Unexpected input');
   })
 });
