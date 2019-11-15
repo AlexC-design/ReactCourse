@@ -23,9 +23,16 @@ class StreamCreate extends React.Component {
   //   );
   // }
 
+  onSubmit(formValues) {
+    console.log(formValues);
+  }
+
   render() {
     return (
-      <form className="ui form">
+      <form
+        onSubmit={this.props.handleSubmit(this.onSubmit)}
+        className="ui form"
+      >
         <Field name="title" component={this.renderInput} label="Enter Title" />
         {/* label gets passed as an argument to renderInput because Field doesn't know what to do with it. */}
         <Field
@@ -33,6 +40,7 @@ class StreamCreate extends React.Component {
           component={this.renderInput}
           label="Enter Description"
         />
+        <button className="ui button orange">submit</button>
       </form>
     );
   }
