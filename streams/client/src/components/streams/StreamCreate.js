@@ -2,9 +2,15 @@ import React from "react";
 import { Field, reduxForm } from "redux-form";
 
 class StreamCreate extends React.Component {
-  renderInput({ input }) {
+  renderInput({ input, label }) {
     //de-structured 'input' from formProps
-    return <input {...input} />; //adding all key-value pairs from 'input'(of formProps) as props to the input element
+    return (
+      <div className="field">
+        <label>{label}</label>
+        <input {...input} />
+        {/*adding all key-value pairs from 'input'(of formProps) as props to the input element*/}
+      </div>
+    );
   }
 
   // --above function before refactor
@@ -19,9 +25,14 @@ class StreamCreate extends React.Component {
 
   render() {
     return (
-      <form>
-        <Field name="title" component={this.renderInput} />
-        <Field name="description" component={this.renderInput} />
+      <form className="ui form">
+        <Field name="title" component={this.renderInput} label="Enter Title" />
+        {/* label gets passed as an argument to renderInput because Field doesn't know what to do with it. */}
+        <Field
+          name="description"
+          component={this.renderInput}
+          label="Enter Description"
+        />
       </form>
     );
   }
