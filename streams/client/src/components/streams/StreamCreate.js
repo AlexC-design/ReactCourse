@@ -2,12 +2,13 @@ import React from "react";
 import { Field, reduxForm } from "redux-form";
 
 class StreamCreate extends React.Component {
-  renderInput({ input, label }) {
+  renderInput({ input, label, meta }) {
     //de-structured 'input' from formProps
     return (
       <div className="field">
         <label>{label}</label>
         <input {...input} />
+        <div>{meta.error}</div>
         {/*adding all key-value pairs from 'input'(of formProps) as props to the input element*/}
       </div>
     );
@@ -46,6 +47,9 @@ class StreamCreate extends React.Component {
   }
 }
 
+//returns empty object if there are no errors
+//else, returns errors { Field name : 'error message' }
+//-- error message gets passed down to this.renderInput of the corresponding Field name
 const validate = formValues => {
   const errors = {};
 
@@ -60,6 +64,8 @@ const validate = formValues => {
   return errors;
 };
 
+//this is where the props get wired up - 'reduxForm' is like 'connect'
 export default reduxForm({
-  form: "streamCreate"
+  form: "streamCreate",
+  validate
 })(StreamCreate);
