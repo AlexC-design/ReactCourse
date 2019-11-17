@@ -7,19 +7,21 @@
     },
     {
       "title": "my stream",
-      "description": "my description",
-      "id": 2
-    },
-    {
-      "title": "my stream",
-      "description": "my description",
-      "id": 3
-    },
-    {
-      "title": "my stream",
       "description": "stream with userid",
       "userId": "104795323312733350211",
       "id": 4
+    },
+    {
+      "title": "new stream",
+      "description": "testing programmatic navigation",
+      "userId": "104795323312733350211",
+      "id": 5
+    },
+    {
+      "title": "test stream",
+      "description": "testing programmatic history",
+      "userId": null,
+      "id": 7
     }
   ]
 }
