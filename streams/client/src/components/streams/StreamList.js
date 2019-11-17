@@ -12,7 +12,9 @@ class SteamList extends React.Component {
     if (stream.userId === this.props.currentUserId) {
       return (
         <div className="right floated content">
-          <button className="ui button blue">Edit</button>
+          <Link to={`/streams/edit/${stream.id}`} className="ui button blue">
+            Edit
+          </Link>
           <button className="ui button basic red">Delete</button>
         </div>
       );
