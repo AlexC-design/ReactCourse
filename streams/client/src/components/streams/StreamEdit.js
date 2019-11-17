@@ -6,8 +6,8 @@ const StreamEdit = props => {
   return <div>StreamEdit</div>;
 };
 
-mapStateToProps = (state, ownProps) => {
+const mapStateToProps = (state, ownProps) => {
   return { stream: state.streams[ownProps.match.params.id] };
 };
 
-export default connect()(StreamEdit);
+export default connect(mapStateToProps)(StreamEdit);
