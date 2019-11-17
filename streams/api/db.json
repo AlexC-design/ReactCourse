@@ -14,6 +14,12 @@
       "title": "my stream",
       "description": "my description",
       "id": 3
+    },
+    {
+      "title": "my stream",
+      "description": "stream with userid",
+      "userId": "104795323312733350211",
+      "id": 4
     }
   ]
 }
