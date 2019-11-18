@@ -1,19 +1,22 @@
 {
   "streams": [
     {
-      "title": "my stream",
-      "description": "my description",
+      "title": "First stream",
+      "description": "test description",
+      "userId": "104795323312733350211",
       "id": 1
     },
     {
-      "title": "my stream",
-      "description": "stream with userid",
-      "id": 4
+      "title": "Second Stream",
+      "description": "test description",
+      "userId": "104795323312733350211",
+      "id": 2
     },
     {
-      "title": "!!!!!!",
-      "description": "component refactor",
-      "id": 8
+      "title": "Third stream",
+      "description": "test description",
+      "userId": "104795323312733350211",
+      "id": 3
     }
   ]
 }
