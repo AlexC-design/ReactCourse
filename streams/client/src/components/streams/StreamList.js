@@ -15,7 +15,12 @@ class SteamList extends React.Component {
           <Link to={`/streams/edit/${stream.id}`} className="ui button blue">
             Edit
           </Link>
-          <button className="ui button basic red">Delete</button>
+          <Link
+            to={`/streams/delete/${stream.id}`}
+            className="ui button basic red"
+          >
+            Delete
+          </Link>
         </div>
       );
     }
