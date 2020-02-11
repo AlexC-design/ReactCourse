@@ -5,10 +5,10 @@ import reducers from "reducers";
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
-export default props => {
+export default ({ children, initialState = {} }) => {
   return (
-    <Provider store={createStore(reducers, composeEnhancers())}>
-      {props.children}
+    <Provider store={createStore(reducers, initialState, composeEnhancers())}>
+      {children}
     </Provider>
   );
 };
